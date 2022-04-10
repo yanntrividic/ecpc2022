@@ -1,0 +1,5 @@
+pour générer le PDF à partir de l'HTML :
+chromium --headless --print-to-pdf=index.pdf index.html
+
+pour lancer l'impression :
+lp -d SELPHY-CP1300 index.pdf 
