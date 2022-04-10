@@ -1,0 +1,279 @@
+A:visited {text-decoration:none; color:#880022; font-weight:bold}
+A:link {text-decoration:none; color:#880022; font-weight:bold}
+A:active {text-decoration:none; color:#880022; font-weight:bold}
+A:hover {text-decoration:underline; color:#880022; font-weight:bold}
+.stabilo-bleu {background: #3766AA; color:white}
+.stabilo-jaune {background: yellow}
+.stabilo-rouge {background: red; color:white}
+.stabilo-vert {background: #00FF00; color:white}
+.stabilo-grisA {background: #AAAAAA}
+.stabilo-grisD {background: #DDDDDD}
+.neo {font-style: italic; font-weight:bold}
+.stabilo-blanc {background: #FFFFFF}
+
+.dmf_REF:visited {color:#000000; font-weight:normal;}
+.dmf_REF:link {color:#000000; font-weight:normal;}
+.dmf_REF:active {color:#000000; font-weight:normal;}
+.dmf_REF:hover {text-decoration:underline; font-weight:normal;}
+.dmf_OCC {color:blue; font-style: italic;}
+
+.font-capitale {font-variant:small-caps}
+
+.stabilo-mot1 {background: yellow}
+.stabilo-mot2 {background: #FF6666; color:white}
+
+.stabilo_0 {background: #FFFF00}
+.stabilo_1 {background: #FF8080; color:white}
+.stabilo_2 {background: #80FF80; color:white}
+.stabilo_3 {background: #80FFFF; color:white}
+.stabilo_4 {background: #FF8000; color:white}
+
+body {
+  scrollbar-face-color: #3766AA; 
+  scrollbar-arrow-color: #FFFFFF;
+}
+
+.Fond {
+	background: #FEFEFE;
+}
+.TableDonnees {
+	background: #FEFEFE;
+}
+.Titre1 {
+	background: #FEFEFE;
+	font-weight: bold;
+	font-size: 18pt;
+	color:	#FF8000;
+	font-family : georgia, verdana, arial, serif;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.Titre1NI {
+	font-weight: bold;
+	font-size: 20pt;
+	color:	black;
+	font-family : georgia, verdana, arial, serif
+}
+.Titre2 {
+	font-weight: bold;
+	font-size: 12pt;
+	color:	black;
+	padding-top:20px;
+	font-family : georgia, verdana, arial, serif
+}
+.Texte1 {
+	background-color: #FEFEFE;
+       	text-align: justify;
+	vertical-align:top;
+	padding-top:10px;
+	padding-left:20px;
+	padding-right:0px;
+	padding-bottom:10px;
+	margin-top:20pt;
+	font-family : georgia, verdana, arial, serif
+}
+.Texte1SansMargeGD {
+	background-color: #FEFEFE;
+	xbackground-color: red;
+       	text-align: justify;
+	vertical-align:top;
+	margin-top:100px;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-family : georgia, verdana, arial, serif
+}
+.Texte1SansMarge {
+	background-color: #FEFEFE;
+       	text-align: justify;
+	vertical-align:top;
+	font-family : georgia, verdana, arial, serif
+}
+.TexteRadio {
+	background-color: #F2D380;
+       	text-align: justify;
+	vertical-align:top;
+	padding-left:20px;
+	padding-right:20px;
+	margin-top:20pt;
+	font-family : georgia, verdana, arial, serif
+}
+.TexteDMF {
+	color: #F2D380;
+       	text-align: justify;
+	vertical-align:top;
+	font-family : georgia, verdana, arial, serif
+}
+.Attention {
+	font-weight: bold;
+	font-size: 12pt;
+	color:	red;
+}
+.AttentionTexte1 {
+	font-weight: bold;
+	color:	red;
+       	text-align: justify;
+	vertical-align:top;
+	padding-top:10px;
+	padding-left:20px;
+	padding-right:0px;
+	padding-bottom:10px;
+	margin-top:20pt;
+	font-family : georgia, verdana, arial, serif;
+}
+.BoutonRessource { 
+        background-color: #880022;
+        color: #FFFFFF;
+        font-weight: bold
+}
+.mev_bouton {
+	font-weight: bold;
+}
+.lien {text-decoration:none; color:#880022; font-weight:bold}
+
+.onglet-inactif {
+  font-family : georgia, verdana, arial, serif;
+  text-align: center;
+  xbackground: #880022;
+  font-weight:normal;
+  font-size:75%;
+  background-image:url('/Images/isis/coin-gauche.png');
+  height:20;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.onglet-actif {
+  font-family : georgia, verdana, arial, serif;
+  text-align: center;
+  font-weight:bold;
+  font-size:75%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.onglet-inactif:visited{ 
+  text-decoration:none;
+  color:#FFFFFF;
+}
+.onglet-inactif:link{ 
+  text-decoration:none;
+  color:#FFFFFF;
+}
+.onglet-inactif:active{ 
+  text-decoration:none;
+  color:#FFFFFF;
+}
+.onglet-inactif:hover{ 
+  color:#880022;
+  text-decoration:none;
+}
+.onglet-inactif a{ 
+  text-decoration:none;
+  color:#000000;
+  font-weight:normal;
+}
+.onglet-inactif a:hover{ 
+  text-decoration:none;
+  color:#880022;
+  font-weight:normal;
+}
+.onglet-desactive{ 
+  font-family : georgia, verdana, arial, serif;
+  text-align: center;
+  color:#AAAAAA;
+  font-weight:normal;
+  font-size:75%;
+  background-image:url('/Images/isis/coin-gauche.png');
+  height:20;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#menu_xxx1 a:visited {
+	color:#edc96e;
+        font-size:11;
+}
+#menu_xxx1 a:link {
+	color:#edc96e;
+        font-size:11;
+}
+#menu_xxx1 a:active {
+	color:#edc96e;
+        font-size:11;
+}
+#menu_xxx1 a:hover {
+	color:#edc96e;
+        font-size:11;
+}
+#menu_xxx1 a:focus {
+	color:#edc96e;
+        font-size:11;
+}
+#menu_xxx1 {
+ 	color:#edc96e;
+	border:0px solid #AAA;
+	text-decoration:none;
+	-moz-border-radius:10px 10px 0 0;
+	-webkit-border-radius:10px 10px 0 0;
+	border-radius:10px 10px 0 0;
+	margin:0;
+	padding:4px 10px;
+        background-image:url('/Images/isis/xxx1.png');
+        font-size:11;
+}
+#menu_xxx1vide {
+	border:0px solid #AAA;
+	text-decoration:none;
+	-moz-border-radius:10px 10px 0 0;
+	-webkit-border-radius:10px 10px 0 0;
+	border-radius:10px 10px 0 0;
+	margin:0;
+	padding:4px 10px;
+        background-image:url('/Images/isis/xxx1.png');
+        font-size:11;
+}
+#menu_xxx1:hover {
+	background:#880022;
+	border:0px solid #AAA;
+	text-decoration:none;
+	-moz-border-radius:10px 10px 0 0;
+	-webkit-border-radius:10px 10px 0 0;
+	border-radius:10px 10px 0 0;
+	margin:0;
+	padding:4px 10px;
+        font-size:11;
+}
+#menu_xxx2 a {
+	color:#edc96e;
+        font-size:11;
+}
+#menu_xxx2 {
+	background:#880022;
+	color:#edc96e;
+	border:0px solid #AAA;
+	text-decoration:none;
+	-moz-border-radius:10px 10px 0 0;
+	-webkit-border-radius:10px 10px 0 0;
+	border-radius:10px 10px 0 0;
+	margin:0;
+	padding:4px 10px;
+        font-size:11;
+}
+menu_xxx2:hover {
+	background:#FFFFFF;
+	color:#000;
+	border:0px solid #89a;
+	text-decoration:none;
+	-moz-border-radius:10px 10px 0 0;
+	-webkit-border-radius:10px 10px 0 0;
+	border-radius:10px 10px 0 0;
+	margin:0;
+	padding:4px 10px;
+        font-size:11;
+}
+#menu_xxx3 {
+        font-size:11;
+	background:#edc96e;
+}
+#menu_xxx3:hover {
+        font-size:11;
+	background:#edc96e;
+}
