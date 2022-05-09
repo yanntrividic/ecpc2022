@@ -3,7 +3,7 @@ from crossover import getCrossoversList
 import sys
 import subprocess
 
-default_printer = "Canon_SELPHY_CP1300" # or Canon_SELPHY_CP1300
+default_printer = "SELPHY-CP1300" # or Canon_SELPHY_CP1300
 default_pdf_file = "printer/index.pdf"
 default_html_file = "printer/index.html"
 default_nb_words_per_column = 28

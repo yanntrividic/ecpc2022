@@ -25,13 +25,15 @@ function sleep(ms) {
 }
 
 async function blink(subjects, timeout, nb) {
+	let sub = ""
     for (let i = 0; i < nb; i++) {
         sub = getRand(subjects)
         rep(sub);
         await sleep(timeout);
     }
-    if (subjects.length > 1) {
-        subjects.pop(sub)
+    if (subjects.length > 0) {
+    	let i = subjects.indexOf(sub)
+        subjects.splice(i, 1)
     } 
 }
 
@@ -45,7 +47,7 @@ function change_border_color(element, color){
 
 function main(){
     console.log("Blink")
-    if(subjects.length > 1) {
+    if(subjects.length > 0) {
         blink(subjects, 20, 50);
     } else {
         rep("Fini !")
@@ -54,3 +56,10 @@ function main(){
 
 var b = document.body
 b.onclick = main;
+
+// event = keyup or keydown
+document.addEventListener('keyup', event => {
+  if (event.code === 'Space') {
+    main()
+  }
+})
