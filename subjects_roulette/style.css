@@ -1,0 +1,64 @@
+html, body {
+	background-color: black;
+	margin: 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	cursor: none;
+}
+
+@font-face {
+	font-family: "BluuNext";
+	src:url("../fonts/BluuNext-Bold.otf");
+}
+
+#box {
+	top: 15%;
+	position: absolute;
+	align-self: center;
+	width: 60%;
+	height: 30%;
+	display: flex;
+	flex-direction: column;
+}
+
+#roulette {
+	position: absolute;
+	text-align: center;
+	align-self: center;
+	font-size: 100px;
+	top: 5%;
+	color: #00FFFF;
+	font-family: "BluuNext";
+	padding: 1em;
+	border: solid;
+	border-width: 3px;
+	border-color: #00FFFF;
+	animation-name: bip;
+	animation-duration: 2.0s;
+	animation-timing-function: ease-out;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+}
+
+@keyframes bip {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+
+.disable-css-transitions {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-o-transition: none !important;
+	transition: none !important;
+	animation: none !important;
+}
