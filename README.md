@@ -1,5 +1,5 @@
 # ecpc2022
-This repository aims at archiving the code used during the performance ECPC 2022 that will take place at the Paris Fine Art School with the collaboration of IRCAM. This is a collaborative work, and my partner for this
+This repository aims at archiving the code used during the performance ECPC 2022 that will take place at the Paris Fine Art School with the collaboration of IRCAM. This is a collaborative work, and my partner for this is Valentin Bonnet, who covers the musical part of the project.
 
 ## List of the modules, and what they do
 
@@ -26,5 +26,5 @@ Basic speech_recognition script that takes the files contained in the `wav` fold
 Those small scripts were designed to run on my machine. I developed them on Ubuntu 20.04, using Python 3.8.10. A few bash commands are used here and there. Most of the scripts require other libraries to run, you can use the `requirements.txt` file to get them. Some of the scripts use Chromium (to generate PDF) or Firefox (to directly open the generated files).
 
 ## Fonts used in this project
-* Bluu Next designed Jean-Baptiste Morizot and Julien Imbert and published by Velvetyne Type Foundry.
-* VG5000 by Justin Bihan and published by Velvetyne Type Foundry.
+* _Bluu Next_ designed Jean-Baptiste Morizot and Julien Imbert and published by Velvetyne Type Foundry.
+* _VG5000_ by Justin Bihan and published by Velvetyne Type Foundry.
