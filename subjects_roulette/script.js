@@ -1,14 +1,14 @@
-let subjects = ['Topline', 'Hasart', 'Paroles', 'Génétique']; // Les sujets qui vont être choisis
-let fake = ["L'armoire au XX<sup>e</sup> siècle","Batterie acoustique sans baguettes ", // sujets fake
-	"Compression side-chain","mots fantômes","faiseur de hasart","glossolalie", "sténographie",
-	"théâtre pour oiseaux","gratuité de l'aléatoire","IAC / DAW / UPIC / IRCAM"]; 
-let doute = ["Et si les hiboux savaient regarder la télé ?", ]; // sujets à rajouter ?
+let subjects = ["Reconnaissance vocale", "Sténographie", "Algorithmes génétiques"]; // Les sujets qui vont être choisis
+
+let fake = ["Pasigraphie","Systèmes non solfégiques","Stéganographie","Glossolalie",
+			"UPIC","BLIPAX","Théâtre pour oiseaux","Mots fantômes","Synthèse vocale",
+			"L'armoire au XX<sup>e</sup> siècle"]; 
 
 let colors = ['blue', 'red', 'cyan', 'yellow', 'green', 'purple', 'orange']; // couleurs aléatoires
 let prev_col = ""
 
 let freq = 500 // ms
-let nb_changes = 20 // donc 500ms*20 = 10s de changements de sujets
+let nb_changes = 40 // donc 500ms*20 = 10s de changements de sujets
 
 let anim_freq = 5 //s fréquence sur laquelle le sub est calé
 
@@ -65,7 +65,7 @@ function main(){
 	roulette = document.getElementById("roulette")
 	text = roulette.innerHTML
 	if (text.toUpperCase() == 'ça va démarrer'.toUpperCase()){
-		roulette.innerHTML = 'ça démarre'.toUpperCase()
+		roulette.innerHTML = 'ça a démarré'.toUpperCase()
 		//console.log(roulette.innerHTML)
 		roulette.classList.add("disable-css-transitions");
 		console.log("Space");

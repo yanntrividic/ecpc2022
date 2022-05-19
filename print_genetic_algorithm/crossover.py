@@ -7,11 +7,11 @@ def crossover(l, q, verbose = False):
 	'''
 	function for implementing the single-point crossover
 	'''
-  
+
 	# converting the string to list for performing the crossover
 	l = list(l)
 	q = list(q)
-  
+
 	# generating the random number to perform crossover
 	k1 = random.randint(0, len(l)-1)
 	if verbose : print("Crossover point 1:", k1)
@@ -19,7 +19,7 @@ def crossover(l, q, verbose = False):
 	# generating the random number to perform crossover
 	k2 = random.randint(0, len(q)-1)
 	if verbose : print("Crossover point 2:", k2)
-  
+
 	# interchanging the genes
 	r1 = l[0:k1] + q[k2:len(q)]
 	r2 = q[0:k2] + l[k1:len(l)]

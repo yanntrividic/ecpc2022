@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup as bs
 import subprocess
 import sys
-from crossover import getCrossoversList
+from crossover import getCrossoversList, mutate
 
 default_printer = "SELPHY-CP1300" # or Canon_SELPHY_CP1300
 default_pdf_file = "index.pdf"
@@ -9,12 +9,13 @@ default_html_file = "index.html"
 default_nb_words_per_column = 28
 
 send_to_print = False
+default_mutate = True
 #if False, then we just display the text in firefox.
 #if True, the file gets printed with the default printer
 
 def check_args():
-	if len(sys.argv) != 3 :
-		print("Two words are required as arguments.")
+	if len(sys.argv) < 3 :
+		print("Two or three words are required as arguments.")
 		quit()
 
 def exec_bash_command(cmd):
@@ -52,14 +53,25 @@ def insert_words_in_html(html_texts, html_file = default_html_file):
 	para2.string.replace_with(html_texts[1])
 
 	with open(html_file, "wb") as f_output:
-	    f_output.write(soup.prettify("utf-8"))
+		f_output.write(soup.prettify("utf-8"))
 
 if __name__ == "__main__":
 	check_args()
 	w1 = sys.argv[1]
 	w2 = sys.argv[2]
 
+
 	words = getCrossoversList(w1, w2, default_nb_words_per_column)
+
+	default_choice = len(sys.argv) == 3 and default_mutate
+	arg_choice = (len(sys.argv) == 4) and (sys.argv[3] == "1")
+	#print(default_choice, arg_choice)
+
+	if default_choice or arg_choice:
+		for i in range(len(words)):
+			for j in range(len(words[i])):
+				words[i][j] = mutate(words[i][j])
+
 	html_lists = get_html_text_from_lists(words[0]), get_html_text_from_lists(words[1])
 	insert_words_in_html(html_lists)
 

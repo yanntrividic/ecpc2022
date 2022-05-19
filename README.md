@@ -4,17 +4,17 @@ This repository aims at archiving the code used during the performance ECPC 2022
 ## List of the modules, and what they do
 
 ### `print_genetic_algorithm/print.py`
-Takes two words as command-line arguments. The words are repeatedly processed through a basic genetic algorithm that proposes new words out of it. The list is then set on a PDF file. If you want, you can tweak the values of the constants in the module, for example to set it up for a instant printing job.
+Takes two words as command-line arguments, and you can specify if you want to perform mutations on the strings by specifying `0` or `1` as the last argument. By defaultn, mutation is performed. The words are repeatedly processed through a basic genetic algorithm that proposes new words out of it. The list is then set on a PDF file. If you want, you can tweak the values of the constants in the module, for example to set it up for a instant printing job.
 
 ### `sentences_to_print_and_cut/gen_html_sentences.py`
 Takes an int and a list of strings as arguments. The first argument specifies the number of repetitions of the strings. The strings then are set on a A4 page in a way that facilitates the cropping when printed. Each page has two columns with identical texts set in different fonts. For example, `python gen_html_sentences.py 3 "foo" "bar"` will output an HTML file with six times "foo" and six times "bar" displayed in an easy-to-use layout.
 You can also edit the `sentences.txt` file and run the program without arguments.
 
 ### `speech_recog_tools/permanent_listening.py`
-Starts a local [Bottle](https://bottlepy.org/) server on port `8081`. You can access it on your browser through `localhost:8081`. This scripts uses the [SpeechRecognition](https://pypi.org/project/SpeechRecognition/) library, and is set to run by default with the english [CMUSphinx](https://cmusphinx.github.io/) model. The script will update the webpage with what the the model has understood from what it has listened. You might need to change the default channel SpeechRecognition is set on by tweaking the `device_index` variable.
+Starts a local [Bottle](https://bottlepy.org/) server on port `8081`. You can access it on your browser through `localhost:8081`. This scripts uses the [SpeechRecognition](https://pypi.org/project/SpeechRecognition/) library, and is set to run by default with the english [CMUSphinx](https://cmusphinx.github.io/) model. The script will update the webpage with what the the model has understood from what it has listened. You might need to change the default channel SpeechRecognition is set on by specifying the device index in your command. For example `python permanent_listening.py 6` will choose the 7th microphone listed.
 
 ### `speech_recog_tools/push_to_listen.py`
-Pretty similar to `permanent_listening.py`, but you get a button to decide when it starts listening, and it then just listens to one sentence and displays it. The Bottle server is on port `8082`. You can access it on your browser through `localhost:8082`. Likewise, you might have to tweak the `device_index` variable in `permanent_listening.py`.
+Pretty similar to `permanent_listening.py`, but you get a button to decide when it starts listening, and it then just listens to one sentence and displays it. The Bottle server is on port `8082`. You can access it on your browser through `localhost:8082`. Likewise, you might have to tweak the device index by passing it as a command line argument.
 
 ### `speech_recog_tools/print_topline_and_transcripts.py`
 Really small script that aligns two lists of strings contained in `lyrics.py` to make them readable in the command line.

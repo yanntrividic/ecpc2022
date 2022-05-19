@@ -1,4 +1,4 @@
-from permanent_listening import get_mic, listen_mic, process_audio
+from permanent_listening import get_mic, listen_mic, process_audio, set_device_index
 import time
 import os
 

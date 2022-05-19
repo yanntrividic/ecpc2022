@@ -2,6 +2,7 @@ import speech_recognition as sr
 from multiprocessing import Process, Manager
 from bottle import route, run
 import server_utils as su
+import sys
 
 #to do : bouton de lancement
 #afficher le processing
@@ -16,15 +17,30 @@ text_file = "tmp/to_display.txt"
 
 #external sound card: device_index = 6
 #default: device_index = 0
-device_index = 0
+default_device_index = 6
+default_port = "8081"
 
 if verbose:
 	print(sr.__version__) # just to print the version not required
 	for index, name in enumerate(sr.Microphone.list_microphone_names()):
 		print("Microphone with name \"{1}\" found for `Microphone(device_index={0})`".format(index, name))
 
-def get_mic(device_index=device_index):
-	return sr.Microphone(device_index=device_index) #my device index is 1, you have to put your device index
+def set_device_index():
+	if len(sys.argv) == 3:
+		return int(sys.argv[1])
+	else:
+		return default_device_index
+
+def set_port(default_port):
+	if len(sys.argv) == 3:
+		return int(sys.argv[2])
+	else:
+		return default_port
+
+def get_mic():
+	i = set_device_index()
+	print("Device index set: " + str(i))
+	return sr.Microphone(device_index=i) #my device index is 1, you have to put your device index
 
 def listen_mic(mic, audio):
 	r = sr.Recognizer()
@@ -86,9 +102,10 @@ def update():
 	return gen_html()
 
 if __name__ == '__main__':
+	set_device_index()
 	mic = get_mic()
 
-	p_bottle = Process(target=run, kwargs=dict(host='localhost', port=8081, debug=True)) 
+	p_bottle = Process(target=run, kwargs=dict(host='localhost', port=set_port(), debug=True)) 
 	p_bottle.daemon = True
 	p_bottle.start()
 
