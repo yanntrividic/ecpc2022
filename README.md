@@ -1,10 +1,13 @@
 # ecpc2022
-This repository aims at archiving the code used during the performance _ECPC 2022_ that took place at the _Multiprises_ Festival, an event organized by the Paris Fine Art School and IRCAM. This is a collaborative work, and my partner for this was [Valentin Bonnet](https://soundcloud.com/valentin-goostman), the artist and musician who covers the musical part of the project.
+
+![Prints from the performance](https://github.com/yanntrividic/ecpc2022/blob/main/prints.png?raw=true)
+
+This repository aims at archiving the code used during the performance _ECPC 2022_ that took place on the May 20<sup>th</sup> and 21<sup>st</sup> 2022 at the _Multiprises_ Festival, an event organized by the Paris Fine Art School and IRCAM. This is a collaborative work, and my partner for this was [Valentin Bonnet](https://soundcloud.com/valentin-goostman), the artist and musician who covers the musical part of the project.
 
 ## List of the modules, and what they do
 
 ### `print_genetic_algorithm/print.py`
-Takes two words as command-line arguments, and you can specify if you want to perform mutations on the strings by specifying `0` or `1` as the last argument. By defaultn, mutation is performed. The words are repeatedly processed through a basic genetic algorithm that proposes new words out of it. The list is then set on a PDF file. If you want, you can tweak the values of the constants in the module, for example to set it up for a instant printing job.
+Takes two words as command-line arguments, and you can specify if you want to perform mutations on the strings by specifying `0` or `1` as the last argument. By default, mutation is performed. The words are repeatedly processed through a basic genetic algorithm that proposes new words out of it. The list is then set on a PDF file. If you want, you can tweak the values of the constants in the module, for example to set it up for a instant printing job.
 
 ### `sentences_to_print_and_cut/gen_html_sentences.py`
 Takes an int and a list of strings as arguments. The first argument specifies the number of repetitions of the strings. The strings then are set on a A4 page in a way that facilitates the cropping when printed. Each page has two columns with identical texts set in different fonts. For example, `python gen_html_sentences.py 3 "foo" "bar"` will output an HTML file with six times "foo" and six times "bar" displayed in an easy-to-use layout.
